@@ -1,0 +1,203 @@
+/*****************************************************************************
+/*
+/*   RESET
+/*
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****************************************************************************
+/*
+/*   FONTS
+/*
+*/
+
+@font-face {
+	font-family: MontserratLight;
+	src: url("/common/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: MontserratBold;
+	src: url("/common/Montserrat-Bold.otf") format("opentype");
+}
+
+
+
+
+/*****************************************************************************
+/*
+/*   MASTER STYLING
+/*
+*/
+
+html {
+	background: url("background.jpg") no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+}
+
+
+#header-logo {
+	max-width: 50%;
+	display: block;
+	margin-top: 1em;
+	margin-left: 0.5em;
+}
+
+#header-logo img {
+	width: 100%;
+}
+
+h1 {
+	font-family: MontserratLight;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	margin-top: 2em;
+}
+
+.episode-full {
+	background: rgba(0, 0, 0, 0.4);
+	padding: 2em;
+	margin-top: 2em;
+}
+
+.episode-title {
+	font-family: MontserratLight;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.5em;
+}
+
+.episode-date {
+	display: block;
+	font-family: MontserratBold;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.6em;
+	text-transform: uppercase;
+	margin-top: 2em;
+	letter-spacing: 0.5em;
+}
+
+.episode-sc {
+	background: #FF6F00;
+	color: white;
+	font-size: 0.8em;
+	padding: 1em;
+	font-family: MontserratLight;
+	display: block;
+	border-radius: 0.25em;
+	text-decoration: none;
+	margin-top: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.episode-sc span {
+	font-family: MontserratBold;
+}
+
+.episode-desc {
+	margin-top: 2em;
+	font-family: MontserratLight;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 1.3em;
+}
+
+.episode-desc ul {
+	margin: 1em 0;
+	list-style-type: square;
+}
+
+.episode-desc li {
+	color: white;
+	margin-left: 2em;
+}
+
+#copyright {
+	font-family: MontserratBold;
+	color: #664f92;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 0.6em;
+	letter-spacing: 0.2em;
+	display: block;
+	margin: 5em 0;
+}
+
+
+/*****************************************************************************
+/*
+/*   MEDIA QUERIES
+/*
+*/
+
+@media only screen and (min-width: 800px) {
+	
+	body {
+		font-size: 1.3em;
+	}
+	
+}
+
+@media only screen and (min-width: 1100px) {
+	
+	body {
+		font-size: 1.6em;
+	}
+	
+}
+
+@media only screen and (min-width: 1300px) {
+	
+	body {
+		font-size: 2em;
+	}
+	
+}
