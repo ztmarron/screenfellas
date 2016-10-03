@@ -5,7 +5,7 @@
 */
 
 #content-center {
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0);
 	box-sizing: content-box;
 	overflow: hidden;
 	min-height: 100%;
@@ -19,11 +19,16 @@
 	margin-top: 3em;
 }
 
+#container-listen-now {
+	margin-top: 2em;
+	padding: 0 3em;
+}
+
 #listen_now {
 	background: #45277a;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
-	margin: 2em 1em 0 1em;
+	margin: auto;
 	border-radius: 4px;
 	padding: 1em;
 	padding-top: 0.8em;
@@ -34,6 +39,7 @@
 	color: white;
 	display: block;
 	text-decoration: none;
+	max-width: 1200px;
 }
 
 #listen_now:hover {
@@ -58,4 +64,12 @@
 	letter-spacing: 0.2em;
 	display: block;
 	margin: 5em 0;
+}
+
+@media only screen and (min-width: 1300px) {
+	
+	body {
+		font-size: 1.6em;
+	}
+	
 }
