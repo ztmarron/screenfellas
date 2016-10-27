@@ -63,7 +63,10 @@ table {
 	src: url("/common/Montserrat-Bold.otf") format("opentype");
 }
 
-
+@font-face {
+	font-family: RobotoRegular;
+	src: url("/common/Roboto-Regular.ttf") format("truetype");
+}
 
 
 /*****************************************************************************
@@ -171,6 +174,15 @@ h1 {
 	margin: 5em 0;
 }
 
+p {
+	font-family: RobotoRegular;
+	color: rgba(255, 255, 255, 0.8);
+	padding: 0 2em;
+	margin-top: 2em;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+
 
 /*****************************************************************************
 /*
@@ -181,7 +193,11 @@ h1 {
 @media only screen and (min-width: 800px) {
 	
 	body {
-		font-size: 1em;
+		font-size: 1.2em;
+	}
+	
+	#header-logo img {
+		width: 20em;
 	}
 	
 }
@@ -189,7 +205,7 @@ h1 {
 @media only screen and (min-width: 1100px) {
 	
 	body {
-		font-size: 1em;
+		font-size: 1.4em;
 	}
 	
 }

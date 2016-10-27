@@ -55,6 +55,22 @@
 	margin-right: 0.5em;
 }
 
+.home-link {
+	color: white;
+	font-size: 0.8em;
+	text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+	text-decoration: none;
+	font-family: MontserratBold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	display: block;
+	text-align: center;
+	margin-top: 3em;
+}
+
+
+
+
 #copyright {
 	font-family: MontserratBold;
 	color: #664f92;
@@ -68,8 +84,8 @@
 
 @media only screen and (min-width: 1300px) {
 	
-	body {
-		font-size: 1.6em;
+	#logo {
+		width: auto;
 	}
 	
 }
