@@ -54,8 +54,23 @@ table {
 */
 
 @font-face {
+	font-family: MontserratUltraLight;
+	src: url("/common/Montserrat-UltraLight.otf") format("opentype");
+}
+
+@font-face {
 	font-family: MontserratLight;
 	src: url("/common/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: MontserratRegular;
+	src: url("/common/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: MontserratSemiBold;
+	src: url("/common/Montserrat-SemiBold.otf") format("opentype");
 }
 
 @font-face {
@@ -182,6 +197,74 @@ p {
 	font-size: 1.1em;
 	line-height: 1.4em;
 }
+
+
+/*****************************************************************************
+/*
+/*   CONTROLS
+/*
+*/
+
+.contentbox {
+	padding: 1em;
+	border: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+input[type="text"], textarea, input[type="submit"] {
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-sizing: border-box;
+	display: block;
+	outline: none;
+	width: 100%;
+	color: white;
+	font-family: RobotoRegular;
+	margin-top: 1em;
+	padding: 1em;
+	border-radius: 0.25em;
+	resize: vertical;
+	font-size: 1em;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+input[type="submit"] {
+	background: #45277a;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background: #4b2a85;
+}
+
+input[type="submit"]:active {
+	background: #402470;
+}
+
+input[type="text"]:focus, textarea:focus {
+	border: 1px solid #ad42f4;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+	color: #555;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	color: #555;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: #555;
+	opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+	color: #555;
+	opacity: 1;
+}
+
 
 
 /*****************************************************************************

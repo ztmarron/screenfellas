@@ -16,7 +16,21 @@
 	<body>
 		<a href="/" id="header-logo"><img src="/common/logo_full.png"></a>
 		<h1>Latest Episode</h1>
-		<div class='episode-full'>
+		<?php
+		
+		$rss = file_get_contents("http://feeds.soundcloud.com/users/soundcloud:users:59013185/sounds.rss");
+		
+		$parser = xml_parser_create();
+		xml_parse_into_struct($parser, $rss, $values, $index);
+		xml_parser_free($parser);
+		
+		echo "<pre style='color: white'>";
+		print_r($values);
+		echo "</pre>";
+		
+		
+		?>
+		<!--<div class='episode-full'>
 			<span class='episode-title'>ScreenFellas Podcast Episode 34: 'The Magnificent Seven' Review & Weekly TV Recap</span>
 			<span class='episode-date'>September 24, 2016</span>
 			<a class='episode-sc' href="https://soundcloud.com/screenfellas/screenfellas-podcast-episode-34-the-magnificent-seven-review-weekly-tv-recap">Listen on <span>SoundCloud</span></a>
@@ -25,7 +39,7 @@
 				<ul><li>Review 'Storks' (2:21)</li><li>Review 'The Magnificent Seven' (16:56)</li><li>Discuss the Western genre (39:06)</li><li>Recap this week in TV (49:24)</li></ul>
 				<p>Thanks for the download and be sure to subscribe!</p>
 			</div>
-		</div>
+		</div>-->
 		<span id="copyright">2016 &copy; ScreenFellas Entertainment</span>
 	</body>
 </html>
