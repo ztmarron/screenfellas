@@ -20,26 +20,22 @@
 		
 		$rss = file_get_contents("http://feeds.soundcloud.com/users/soundcloud:users:59013185/sounds.rss");
 		
-		$parser = xml_parser_create();
-		xml_parse_into_struct($parser, $rss, $values, $index);
-		xml_parser_free($parser);
+		$xml = simplexml_load_string($rss);
 		
-		echo "<pre style='color: white'>";
-		print_r($values);
-		echo "</pre>";
-		
-		
+		foreach($xml->channel->item as $podcast) {
+			$title = $podcast->title[0];
+			$date = date("F j, Y", strtotime($podcast->pubDate[0]));
+			$link = $podcast->link;
+			$summary = nl2br($podcast->description);
+			
+			echo "<div class='episode-full'>
+				<span class='episode-title'>$title</span>
+				<span class='episode-date'>$date</span>
+				<a class='episode-sc' href='$link'>Listen on <span>SoundCloud</span></a>
+				<div class='episode-desc'>$summary</div>
+				</div>";
+		}
 		?>
-		<!--<div class='episode-full'>
-			<span class='episode-title'>ScreenFellas Podcast Episode 34: 'The Magnificent Seven' Review & Weekly TV Recap</span>
-			<span class='episode-date'>September 24, 2016</span>
-			<a class='episode-sc' href="https://soundcloud.com/screenfellas/screenfellas-podcast-episode-34-the-magnificent-seven-review-weekly-tv-recap">Listen on <span>SoundCloud</span></a>
-			<div class='episode-desc'>
-				<p>In this episode of the ScreenFellas Podcast Ozzy and Carlos:</p>
-				<ul><li>Review 'Storks' (2:21)</li><li>Review 'The Magnificent Seven' (16:56)</li><li>Discuss the Western genre (39:06)</li><li>Recap this week in TV (49:24)</li></ul>
-				<p>Thanks for the download and be sure to subscribe!</p>
-			</div>
-		</div>-->
 		<span id="copyright">2016 &copy; ScreenFellas Entertainment</span>
 	</body>
 </html>
